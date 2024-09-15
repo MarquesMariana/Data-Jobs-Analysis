@@ -29,17 +29,18 @@ SELECT
 FROM 
    calculated_growth
 WHERE 
-   job_title LIKE '%Analyst%'
-   AND salary_growth_pct > 0
+   salary_growth_pct > 0
 ORDER BY 
    salary_growth_pct DESC
 LIMIT 10;
 
 
 /*INSIGHTS 
-Data Analysts lead with an impressive 1100% growth, likely driven by strong demand and their versatility across various industries. 
-BI Data Analysts and Research Analysts follow with 500% and 434.44% growth, respectively, probrably reflecting the rising value of business intelligence and research insights.
-Specialized positions like Quantitative Analysts offer high salaries (up to $200,000) but exhibit stable growth rates (around 126.76% to 317.98%).
+Data engineering, machine learning, and data science roles are clearly leading the way, with salary growth reaching up to 2631%. This highlights the growing importance of managing and processing large volumes of data, making these roles more valuable.
+AI Engineers, with a growth of 1992%, underscore the increasing focus on AI, automation, and innovative technologies. 
+Engineering roles also show notable growth, emphasizing the ongoing demand for technical expertise across a variety of industries.
+Finally, Data Analysts, while showing more moderate growth, still demonstrate impressive salary increases. This might be because their role, while critical, is often seen as less specialized compared to Data Scientists or AI Engineers, who typically require more advanced technical knowledge and skills.
+
 
 RESULTS:
 [

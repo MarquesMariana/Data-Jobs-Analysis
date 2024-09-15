@@ -25,8 +25,7 @@ FROM (
       FROM 
          salaries) AS avg_experience_level
 FROM 
-   salaries) AS subquery
-WHERE job_title LIKE '%Analyst%';
+   salaries) AS subquery;
 
 -- Average, Max, Min and Median
 WITH ranked_salaries AS (
@@ -64,7 +63,7 @@ ORDER BY
     avg_salary ASC;
 
 /* INSIGHTS
-The correlation of 0.5011 indicates a moderate relationship between experience level and salary. As experience increases, there is a tendency for salary to increase as well, although the relationship is not perfectly linear.
+The correlation of 0.2984 indicates a moderate relationship between experience level and salary. As experience increases, there is a tendency for salary to increase as well, although the relationship is not perfectly linear.
 There is a clear upward trend in salary as experience level increases, with executives earning almost double that of entry-level professionals, when comparing average salaries.
 While the average salary increases, the salary ranges across all experience levels show significant variation, indicating some outliers or specialized roles that offer extremely high salaries even at lower experience levels.
 The median salary is consistently below the average, suggesting that high outliers may be skewing the average upwards, particularly at the entry and mid-levels.
@@ -72,7 +71,7 @@ The median salary is consistently below the average, suggesting that high outlie
 RESULTS:
 [
 	{
-		"CORRELATION" : 0.5011122109625771
+		"CORRELATION" : 0.29843863593576136
 	}
 ]
 
