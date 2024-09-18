@@ -1,7 +1,9 @@
 /*How does the contract type influence salary?*/
 SELECT 
    employment_type,
-  AVG( salary_in_usd)
+  AVG( salary_in_usd),
+  MAX(salary_in_usd),
+  MIN(salary_in_usd)
 FROM
    salaries
 GROUP BY 
@@ -18,19 +20,27 @@ RESULTS
 [
 	{
 		"employment_type" : FT,
-		"AVG( salary_in_usd)" : 160733.7622
+		"AVG( salary_in_usd)" : 160733.7622,
+		"MAX(salary_in_usd)" : 800000,
+		"MIN(salary_in_usd)" : 15000
 	},
 	{
 		"employment_type" : CT,
-		"AVG( salary_in_usd)" : 107675.3279
+		"AVG( salary_in_usd)" : 107675.3279,
+		"MAX(salary_in_usd)" : 416000,
+		"MIN(salary_in_usd)" : 18000
 	},
 	{
 		"employment_type" : PT,
-		"AVG( salary_in_usd)" : 81407.1250
+		"AVG( salary_in_usd)" : 81407.1250,
+		"MAX(salary_in_usd)" : 405000,
+		"MIN(salary_in_usd)" : 15966
 	},
 	{
 		"employment_type" : FL,
-		"AVG( salary_in_usd)" : 50651.5625
+		"AVG( salary_in_usd)" : 50651.5625,
+		"MAX(salary_in_usd)" : 100000,
+		"MIN(salary_in_usd)" : 20000
 	}
 ]
 */
