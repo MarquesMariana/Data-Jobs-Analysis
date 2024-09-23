@@ -29,6 +29,7 @@ SELECT
 FROM 
    calculated_growth
 WHERE 
+	
    salary_growth_pct > 0
 ORDER BY 
    salary_growth_pct DESC
@@ -36,12 +37,12 @@ LIMIT 10;
 
 
 /*INSIGHTS 
-Data engineering, machine learning, and data science roles are clearly leading the way, with salary growth reaching up to 2631%. This highlights the growing importance of managing and processing large volumes of data, making these roles more valuable.
-AI Engineers, with a growth of 1992%, underscore the increasing focus on AI, automation, and innovative technologies. 
-Engineering roles also show notable growth, emphasizing the ongoing demand for technical expertise across a variety of industries.
-Finally, Data Analysts, while showing more moderate growth, still demonstrate impressive salary increases. This might be because their role, while critical, is often seen as less specialized compared to Data Scientists or AI Engineers, who typically require more advanced technical knowledge and skills.
-
-
+The results show that roles more related to Data analysis have the highest growth when comparing average salary of entry levels and executive levels. 
+Data Analyst roles lead with an impressive 1100% salary growth, followed by BI Data Analysts with 500%, and Research Analysts with 434.4%. 
+Business Intelligence Analysts see a 318% increase, while Business Analysts experience 293% growth. 
+The broader Analyst role also shows considerable growth at 253%. 
+More specialized positions, like Data Governance Analysts and Quantitative Analysts, demonstrate salary growth of 134.4% and 126.8%, respectively. 
+This results demonstrate the importance of these roles in a company but also demonstrates that this are roles that are easier to get for recent graduates, this implies a long learning curve in these roles, where professionals can significantly grow their expertise and compensation over time.
 RESULTS:
 [
 	{
