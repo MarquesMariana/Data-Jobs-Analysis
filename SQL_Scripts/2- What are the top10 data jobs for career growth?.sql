@@ -137,7 +137,7 @@ END;
 
 WITH salary_growth AS (
    SELECT 
-      job_title,
+      job_category,
       MAX(CASE WHEN experience_level = 'EX' THEN salary_in_usd END) AS max_salary,
       MIN(CASE WHEN experience_level = 'EN' THEN salary_in_usd END) AS min_salary
    FROM 
@@ -147,7 +147,7 @@ WITH salary_growth AS (
 ),
 calculated_growth AS (
    SELECT 
-      job_title,
+      job_category,
       max_salary,
       min_salary,
       (max_salary - min_salary) / min_salary * 100 AS salary_growth_pct
@@ -158,13 +158,14 @@ calculated_growth AS (
       AND max_salary IS NOT NULL
 )
 SELECT 
-   job_title,
+   job_category,
    max_salary,
    min_salary,
    salary_growth_pct
 FROM 
    calculated_growth
 WHERE 
+	
    salary_growth_pct > 0
 ORDER BY 
    salary_growth_pct DESC
@@ -172,69 +173,69 @@ LIMIT 10;
 
 
 /*INSIGHTS 
-Data engineering, AI, and machine learning roles are seeing the most significant salary growth, with Engineering roles leading at 3652.77% and AI Specialists close behind at 2886.67%, reflecting the growing need for technical expertise in handling large datasets and automation. 
-Data Scientists also show strong growth at 2500%, further emphasizing their critical role in data analysis. 
-While Business Analysts, Insight Analysts and other less technical roles, exhibit more moderate salary increases, they remain essential for translating data insights into business strategies. 
-Overall, highly specialized technical roles are driving the largest salary gains.
+Data & Software Engineering: Leading the growth charts, this category has witnessed an extraordinary salary increase of 3652.77%. This surge underscores the explosive demand for advanced technical skills and the increasing complexity of data systems and software engineering.
+General Data Roles: Although broader in scope, general data roles have also experienced a significant salary growth of 3409.33%. This category reflects the rising importance of data-centric roles across various industries, driving substantial financial rewards for expertise in data analysis and management.
+AI & Machine Learning Engineering: With a salary growth of 2886.67%, AI and machine learning roles highlight the premium placed on cutting-edge technologies and the need for professionals who can develop and implement sophisticated AI solutions.
+AI Research & Science: This field shows a robust salary growth of 2500%, reflecting the crucial role of AI research in advancing technology and its application across diverse sectors.
 
 RESULTS:
 [
 	{
-		"job_title" : "Engineer",
+		"job_category" : "Data & Software Engineering",
 		"max_salary" : 609000,
 		"min_salary" : 16228,
 		"salary_growth_pct" : 3652.7730
 	},
 	{
-		"job_title" : "Research Associate",
+		"job_category" : "General Data Role",
 		"max_salary" : 526400,
 		"min_salary" : 15000,
 		"salary_growth_pct" : 3409.3333
 	},
 	{
-		"job_title" : "AI Specialist",
+		"job_category" : "AI & Machine Learning Engineering",
 		"max_salary" : 448000,
 		"min_salary" : 15000,
 		"salary_growth_pct" : 2886.6667
 	},
 	{
-		"job_title" : "Data Scientist",
+		"job_category" : "AI Research & Science",
 		"max_salary" : 416000,
 		"min_salary" : 16000,
 		"salary_growth_pct" : 2500.0000
 	},
 	{
-		"job_title" : "Engineering Manager",
+		"job_category" : "Engineer Manager",
 		"max_salary" : 196000,
 		"min_salary" : 16455,
 		"salary_growth_pct" : 1091.1273
 	},
 	{
-		"job_title" : "Data Quality Specialist",
+		"job_category" : "Data Integration & Quality",
 		"max_salary" : 282000,
 		"min_salary" : 23753,
 		"salary_growth_pct" : 1087.2185
 	},
 	{
-		"job_title" : "Business Analyst",
+		"job_category" : "Business Analysts",
 		"max_salary" : 320000,
 		"min_salary" : 36266,
 		"salary_growth_pct" : 782.3692
 	},
 	{
-		"job_title" : "Insight Analyst",
+		"job_category" : "Data Analysts",
 		"max_salary" : 150000,
 		"min_salary" : 18000,
 		"salary_growth_pct" : 733.3333
 	},
 	{
-		"job_title" : "Solutions Engineer",
+		"job_category" : "Platform & Infrastructure Engineering",
 		"max_salary" : 340000,
 		"min_salary" : 42866,
 		"salary_growth_pct" : 693.1694
 	},
 	{
-		"job_title" : "Manager",
+		"job_category" : "Consulting & Management Roles",
 		"max_salary" : 180000,
 		"min_salary" : 40000,
 		"salary_growth_pct" : 350.0000
