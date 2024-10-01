@@ -1,10 +1,10 @@
 # Project Overview
- 📈 This project provides a comprehensive analysis of the job market, focusing on data-related roles, to help individuals (and me) make informed, data-driven career decisions 💡. Ultimatly, I want to answer the question  "What are the best job characteristics I should look for when entering the data job market?"💰.
+ 📈 This project provides a comprehensive analysis of the job market, focusing on data-related roles, to help individuals make informed, data-driven career decisions 💡. Ultimatly, I want to answer the question  "What are the best job characteristics I should look for when entering the data job market?"💰.
 <br />
 
 Dataset used: https://aijobs.net/salaries/download/
 
-This project is divided into three main parts:
+This project is divided into two main parts:
 1. Job Stability: Analyse career growth potential.
 2. Job Characteristics: Explore how various job-related factors, such as company size, location, and contract type, affect salary.
 
@@ -13,7 +13,6 @@ This project is divided into three main parts:
 
 # Data Structure and Overview
 The Job_database consists of four tables shown below: salaries, ISO_Code, Cost and continents. With a total raw count of 43357.
-
 
 
 
